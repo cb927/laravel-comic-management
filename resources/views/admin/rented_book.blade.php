@@ -43,19 +43,19 @@
                         <th>No</th>
                         <th>Barcode</th>
                         <th>Title</th>
-                        <th>Volume</th>
-                        <th>Action</th>
+                        <th>RentAt</th>
+                        <th>ReturnAt</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if(count($books) == 0)
+                    @if(count($rented_books) == 0)
                     <tr>
                         <td colspan="5">
                             There isn't any book.
                         </td>
                     </tr>
                     @else
-                    @foreach($books as $index => $item)
+                    @foreach($rented_books as $index => $item)
                     <tr>
                         <td>{{$index + 1}}</td>
                         <td>
@@ -65,15 +65,10 @@
                             {{$item->title}}
                         </td>
                         <td>
-                            {{$item->volume}}
+                            {{$item->rent_at}}
                         </td>
                         <td class="table-action">
-                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit product">
-                                <i class="fas fa-user-edit"></i>
-                            </a>
-                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Delete product">
-                                <i class="fas fa-trash"></i>
-                            </a>
+                            {{$item->return_at}}
                         </td>
                     </tr>
                     @endforeach

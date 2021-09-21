@@ -29,3 +29,6 @@ Route::get('/admin/logout', [AuthController::class, 'logout'])->name('admin.logo
 
 //Admin route
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/admin/add', [AdminController::class, 'add_book'])->name('admin.book.add');
+Route::post('/admin/add', [AdminController::class, 'store_book'])->name('admin.book.add.post');
+Route::get('/admin/rented', [AdminController::class, 'rented_book'])->name('admin.book.rented');
