@@ -1,0 +1,37 @@
+.content__top, .content__bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.content__top {
+    margin-bottom: 50px;
+}
+
+.content__top a, .content__bottom a {
+    display: block;
+    max-width: 150px;
+    margin-right: 30px;
+}
+
+.content__top a:nth-last-of-type(1), .content__bottom a:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+.content__top a img, .content__bottom a img {
+    width: 100%;
+}
+
+a.btn {
+    color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+    .content__top {
+        margin-bottom: 13.3vw;
+    }
+
+    .content__top a, .content__bottom a {
+        max-width: 25vw;
+        margin-right: 8vw;
+    }
+}
